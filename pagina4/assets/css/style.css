@@ -1,0 +1,132 @@
+
+@charset "UTF-8";
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+ 
+  @font-face{ 
+             font-family: 'Android';
+             src: url('../fontes/idroid.otf') format('opentype');
+             font-weight: normal;
+
+  }
+
+:root {
+    --primary-color:rgb(78, 2, 150);
+    --primary-color-dark:rgb(38, 2, 71);
+    --cor0: #696969;
+    --cor1: #413e3e83;
+    --cor2: #a9a9a932;
+    --cor3: #808080;
+    --cor4: #696969;
+    --cor5: #000000;
+    
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif; 
+    --fonte-destaque: 'Bebas Neue', cursive; 
+    --font-android: 'Android', cursive; 
+    
+}
+
+    
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+body{
+    background: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5;
+    
+}
+
+
+h2{
+    background-color: gray;
+    border-radius: 10px;
+    color:black;
+    text-align: center;
+}
+h3{
+    font-size: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+p{
+    font-size: var(--font-android);
+    font-weight: normal;
+    color: var(--cor4);
+    font-size: 1.0em;
+    background-color: var(--cor2);
+    
+}
+nav{
+    padding-left: 20px;
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+form input, form label, form button{
+    display: block;
+    width: 100%;
+}
+
+form input{
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form input :focus{
+    outline: 1px solid var(--primary-color);
+}
+
+form button{
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 700px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+    
+}
+form button:hover{
+    background: var(--primary-color-dark);
+}
+
+button{
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px 20px ;
+    border-radius: 6px;
+    border: 1px solid #160202;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 155px;
+    text-align: center;
+    font-weight: 600;
+    margin-right: 70px;
+    margin-top: 15px;
+    cursor: pointer;
+
+
+}

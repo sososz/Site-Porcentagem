@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+   
+</head>
+
+    <section class="container">
+        
+        <h2>Avaliação e Recursos Adicionais</h2>
+        <p>A porcentagem (símbolo %) é uma razão cujo denominador é igual a 100. Ela representa uma comparação de uma parte com o todo.</p>
+
+        <!-- Formulário para perguntas -->
+        <form id="Quiz">
+            <p>Pergunta 1: Em uma sala de aula há 30 alunos, dos quais 40% são meninas. Quantas meninas têm na sala?</p>
+            <div class="radio-group"><input type="radio" name="q1" value="10 meninas"><label>10 meninas</label></div>
+            <div class="radio-group"><input type="radio" name="q1" value="12 meninas"><label>12 meninas</label></div>
+            <div class="radio-group"><input type="radio" name="q1" value="15 meninas"><label>15 meninas</label></div>
+            <div class="radio-group"><input type="radio" name="q1" value="18 meninas"><label>18 meninas</label></div>
+            
+            <p>Pergunta 2: Júlia acertou 75% das questões de Matemática do teste e Mariana acertou 4/5. Quem acertou mais questões?</p>
+            <div class="radio-group"><input type="radio" name="q2" value="Júlia"><label>Júlia</label></div>
+            <div class="radio-group"><input type="radio" name="q2" value="Mariana"><label>Mariana</label></div>
+            <div class="radio-group"><input type="radio" name="q2" value="As duas acertaram o mesmo número de questões."><label>As duas acertaram o mesmo número de questões.</label></div>
+            
+            <p>Pergunta 3: Uma conta de energia foi paga com atraso de um dia. Na conta em específico, é explicado que em contas pagas com atraso incide uma multa de 4% sobre o valor. Sabendo que a conta custava R$ 360, então o valor pago pelo cliente na conta devido ao atraso foi de:</p>
+            <div class="radio-group"><input type="radio" name="q3" value="R$ 374,40"><label>R$ 374,40</label></div>
+            <div class="radio-group"><input type="radio" name="q3" value="R$ 114,40"><label>R$ 114,40</label></div>
+            <div class="radio-group"><input type="radio" name="q3" value="R$ 504,00"><label>R$ 504,00</label></div>
+
+            <p>Pergunta 4: O preço de um produto foi aumentado em 20% e passou a custar R$ 72,00. Qual era o preço original do produto?</p>
+            <div class="radio-group"><input type="radio" name="q4" value="R$ 60,00"><label>R$ 60,00</label></div>
+            <div class="radio-group"><input type="radio" name="q4" value="R$ 64,00"><label>R$ 64,00</label></div>
+            <div class="radio-group"><input type="radio" name="q4" value="R$ 70,00"><label>R$ 70,00</label></div>
+            <div class="radio-group"><input type="radio" name="q4" value="R$ 75,00"><label>R$ 75,00</label></div>
+
+            <p>Pergunta 5: Em uma promoção, um produto que custava R$ 200,00 recebeu um desconto de 15%. Qual é o novo preço do produto?</p>
+            <div class="radio-group"><input type="radio" name="q5" value="R$ 170,00"><label>R$ 170,00</label></div>
+            <div class="radio-group"><input type="radio" name="q5" value="R$ 160,00"><label>R$ 160,00</label></div>
+            <div class="radio-group"><input type="radio" name="q5" value="R$ 150,00"><label>R$ 150,00</label></div>
+            <div class="radio-group"><input type="radio" name="q5" value="R$ 140,00"><label>R$ 140,00</label></div>
+
+            <button type="button" onclick="verificarRespostas()">Enviar</button>
+        </form>
+        
+        <div id="resultado"></div>
+
+        <div>
+            <a href="../pagina1/index.html"><button>Voltar à Página 1</button></a>
+            <a href="../pagina5/pagina5.html"><button>Voltar</button></a>
+            <a href="../index.html"><button>Início</button></a>
+        </div>
+    </section>
+
+    <script>
+        function verificarRespostas() {
+            const respostasCorretas = {
+                q1: "12 meninas",
+                q2: "Mariana",
+                q3: "R$ 374,40",
+                q4: "R$ 60,00",
+                q5: "R$ 170,00"
+            };
+
+            let pontos = 0;
+            const form = document.getElementById('Quiz');
+            const resultadoDiv = document.getElementById('resultado');
+
+            for (let pergunta in respostasCorretas) {
+                const radios = form.elements[pergunta];
+                for (let radio of radios) {
+                    if (radio.checked && radio.value === respostasCorretas[pergunta]) {
+                        pontos++;
+                    }
+                }
+            }
+
+            resultadoDiv.innerHTML = `Você acertou ${pontos} de 5 perguntas.`;
+        }
+    </script>
+</body>
+
+</html>

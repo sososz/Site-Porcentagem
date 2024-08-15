@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+      <!--Para mudar a cor do link-->
+    <style>
+        nav a{
+            color:white
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!--Caso o usuário queira voltar para o Inicio-->
+     <nav>
+        <a href ="../index.html">Inicio</a>
+    </nav>
+    
+    <section class="container">
+        
+        <h2>Avaliação e Recursos adicionais</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, eveniet aut! Expedita laborum optio illum,
+            minima nisi velit eum veniam dolorum laudantium facilis iure nobis. Ab perferendis fuga soluta quam!</p>
+            <!--Para fazer as perguntas-->
+            <form id="Quiz">
+                <p>Pergunta 1:Abacate</p>
+        <input type="radio" name="q1" value="Cenoura"> Cenoura<br>
+        <input type="radio" name="q1" value="Laranja"> Laranja<br>
+        <input type="radio" name="q1" value="Melância"> Melância<br>
+        
+        <p>Pergunta 2: Qual é o maior planeta do sistema solar?</p>
+        <input type="radio" name="q2" value="Vênus"> Vênus<br>
+        <input type="radio" name="q2" value="Júpiter"> Júpiter<br>
+        <input type="radio" name="q2" value="Marte"> Marte<br>
+
+        <p>Pergunta 2: Qual é o maior planeta do sistema solar?</p>
+        <input type="radio" name="q3" value="Vênus"> Vênus<br>
+        <input type="radio" name="q3" value="Júpiter"> Júpiter<br>
+        <input type="radio" name="q3" value="Marte"> Marte<br>
+        
+        <button type="button" onclick="verificarRespostas()">Enviar</button>
+            </form>
+            <div id="resultado"></div>
+            <div>
+       <a href="../pagina1/index.html"><button>Voltar a pagina1</button></a> 
+       <a href="../pagina5/pagina5.html"><button>Voltar</button></a> 
+       <a href="../index.html"><button>Inicio</button></a> 
+       
+       </div>
+    </section>
+
+    
+    <script src="../pagina6/assets/js/main.js"></script>
+</body>
+
+</html>
